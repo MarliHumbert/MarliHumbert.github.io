@@ -253,21 +253,25 @@
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 3rem;
-      align-items: center;
+      gap: 4.5rem;
+      align-items: flex-start;
     }
 
     .profile-image-wrap {
       border-radius: 32px;
       overflow: hidden;
-      box-shadow: 0 24px 60px rgba(38, 50, 35, 0.14);
+      box-shadow: 0 32px 80px rgba(38, 50, 35, 0.2);
+      position: sticky;
+      top: 6rem;
     }
 
     .profile-image {
       width: 100%;
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 3.5 / 4.5;
       object-fit: cover;
       display: block;
+      image-rendering: crisp-edges;
+    }
     }
 
     .profile-card {
