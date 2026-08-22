@@ -131,10 +131,6 @@
       justify-content: center;
       padding: 0 1rem;
       text-align: left;
-      background-image: url('images/ambiente-desktop.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center 60%;
       background-attachment: fixed;
       overflow: hidden;
     }
@@ -143,15 +139,26 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(46, 76, 53, 0.42);
+      background-image: url('images/ambiente-desktop.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center 60%;
+      filter: saturate(1.15) contrast(1.04) brightness(0.98) sepia(0.06);
+      z-index: 0;
     }
 
     .hero::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.14) 55%, rgba(255,255,255,0.03) 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.14) 55%, rgba(255,255,255,0.03) 100%), rgba(46, 76, 53, 0.42);
+      z-index: 1;
       pointer-events: none;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 2;
     }
 
     .hero-content {
@@ -628,7 +635,6 @@
 
       .hero {
         background-attachment: scroll;
-        background-position: center center;
         min-height: 82vh;
       }
 
@@ -654,10 +660,15 @@
 
     @media (max-width: 640px) {
       .hero {
+        background-attachment: scroll;
+      }
+
+      .hero::before {
         background-image: url('images/ambiente-mobile.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        filter: none;
       }
 
       .hero-content,
