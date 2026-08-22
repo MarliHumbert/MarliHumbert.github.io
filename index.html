@@ -481,11 +481,37 @@
     }
 
     .contact-card strong {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
       margin-bottom: 0.55rem;
       font-size: 1rem;
       letter-spacing: 0.03em;
       color: #f5f4f2;
+    }
+
+    .contact-icon-link {
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 20px;
+      line-height: 1;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .contact-icon-img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .email-icon {
+      font-size: 20px;
     }
 
     .contact-card a {
@@ -892,15 +918,28 @@
         <p class="contact-text">Atendemos crianças, adolescentes e adultos com psicoterapia, avaliação neuropsicológica, intervenção no processo de aquisição do conhecimento e apoio emocional. Sua evolução emocional e mental é a nossa prioridade.</p>
         <div class="contact-details">
           <div class="contact-card">
-            <strong>💬 WhatsApp</strong>
+            <strong class="contact-card-title">
+              <a class="contact-icon-link" href="https://wa.me/5551999752389" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+                <img src="images/ChatGPT Image 22 de ago. de 2026, 15_59_28.png" alt="" class="contact-icon-img">
+              </a>
+              <span>WhatsApp</span>
+            </strong>
             <a href="https://wa.me/5551999752389" target="_blank" rel="noopener noreferrer">(51) 99975-2389</a>
           </div>
           <div class="contact-card">
-            <strong>✉️ E-mail</strong>
+            <strong class="contact-card-title">
+              <a class="contact-icon-link email-icon" href="mailto:mhumbertoliv@yahoo.com.br" aria-label="Enviar e-mail">✉</a>
+              <span>E-mail</span>
+            </strong>
             <a href="mailto:mhumbertoliv@yahoo.com.br">mhumbertoliv@yahoo.com.br</a>
           </div>
           <div class="contact-card">
-            <strong>📷 Instagram</strong>
+            <strong class="contact-card-title">
+              <a class="contact-icon-link" href="https://instagram.com/psicop.psicol" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram">
+                <img src="images/ChatGPT Image 22 de ago. de 2026, 15_47_55.png" alt="" class="contact-icon-img">
+              </a>
+              <span>Instagram</span>
+            </strong>
             <a href="https://instagram.com/psicop.psicol" target="_blank" rel="noopener noreferrer">@psicop.psicol</a>
           </div>
         </div>
