@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marli Humbert · Psicopedagogia · Espaço Aprender a Aprender</title>
   <meta name="description" content="Marli Humbert — Pedagoga e Psicopedagoga. Compreender para desenvolver, acolher para transformar.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="alternate icon" href="images/favicon.svg">
   <meta property="og:title" content="Espaço Aprender a Aprender | Marli Humbert">
   <meta property="og:description" content="Psicopedagogia e Neuropsicopedagogia com Marli Humbert. Compreender para desenvolver, acolher para transformar.">
   <meta property="og:image" content="https://marlihumbert.github.io/images/preview-link-marli-humbert.png">
@@ -125,15 +127,18 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1.1rem;
       font-size: 0.95rem;
       font-weight: 600;
       letter-spacing: 0.02em;
     }
 
-    .brand::before {
-      content: '🧠';
-      font-size: 1.2rem;
+    .brand-logo {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      object-fit: contain;
+      display: block;
     }
 
     .brand span {
@@ -510,12 +515,22 @@
     }
 
     .contact-card {
+      display: block;
       padding: 1.5rem;
       border-radius: 24px;
       background: rgba(255,255,255,0.12);
       border: 1px solid rgba(255,255,255,0.14);
       color: #fff;
       box-shadow: 0 20px 40px rgba(8, 14, 9, 0.14);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .contact-card:hover,
+    .contact-card:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 48px rgba(8, 14, 9, 0.22);
+      background: rgba(255,255,255,0.18);
     }
 
     .contact-card strong {
@@ -552,11 +567,6 @@
       font-size: 20px;
     }
 
-    .contact-card a {
-      color: #fff;
-      word-break: break-word;
-    }
-
     .contact-actions {
       display: flex;
       justify-content: center;
@@ -587,6 +597,17 @@
 
     .contact-info p {
       margin: 0.75rem 0;
+    }
+
+    .address-link {
+      text-decoration: underline;
+      text-decoration-color: rgba(255,255,255,0.4);
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.25s ease;
+    }
+
+    .address-link:hover {
+      text-decoration-color: rgba(255,255,255,0.9);
     }
 
 .wa-btn {
@@ -870,7 +891,10 @@
   <a id="topo"></a>
   <header>
     <nav class="navbar" aria-label="Navegação principal">
-      <a class="brand" href="#topo"><span>Espaço Aprender a Aprender</span></a>
+      <a class="brand" href="#topo">
+        <img src="images/favicon.svg" alt="" class="brand-logo">
+        <span>Espaço Aprender a Aprender</span>
+      </a>
       <div class="nav-links" aria-label="Links de navegação">
         <a href="#marli">Marli</a>
         <a href="#psicopedagogia">Psicopedagogia</a>
@@ -955,44 +979,44 @@
         <h2 id="contato-title" class="contact-title">Agende sua consulta</h2>
         <p class="contact-text">Atendemos crianças, adolescentes e adultos com psicoterapia, avaliação neuropsicológica, intervenção no processo de aquisição do conhecimento e apoio emocional. Sua evolução emocional e mental é a nossa prioridade.</p>
         <div class="contact-details">
-          <div class="contact-card">
+          <a class="contact-card" href="https://wa.me/5551999752389" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp: (51) 99975-2389">
             <strong class="contact-card-title">
-              <a class="contact-icon-link" href="https://wa.me/5551999752389" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
-                <img src="images/ChatGPT Image 22 de ago. de 2026, 15_59_28.png" alt="" class="contact-icon-img">
-              </a>
+              <span class="contact-icon-link" aria-hidden="true">
+                <img src="images/icon-whatsapp.png" alt="" class="contact-icon-img">
+              </span>
               <span>WhatsApp</span>
             </strong>
-            <a href="https://wa.me/5551999752389" target="_blank" rel="noopener noreferrer">(51) 99975-2389</a>
-          </div>
-          <div class="contact-card">
+            <span>(51) 99975-2389</span>
+          </a>
+          <a class="contact-card" href="mailto:mhumbertoliv@yahoo.com.br" aria-label="Enviar e-mail para mhumbertoliv@yahoo.com.br">
             <strong class="contact-card-title">
-              <a class="contact-icon-link email-icon" href="mailto:mhumbertoliv@yahoo.com.br" aria-label="Enviar e-mail">✉</a>
+              <span class="contact-icon-link email-icon" aria-hidden="true">✉</span>
               <span>E-mail</span>
             </strong>
-            <a href="mailto:mhumbertoliv@yahoo.com.br">mhumbertoliv@yahoo.com.br</a>
-          </div>
-          <div class="contact-card">
+            <span>mhumbertoliv@yahoo.com.br</span>
+          </a>
+          <a class="contact-card" href="https://instagram.com/psicop.psicol" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram: @psicop.psicol">
             <strong class="contact-card-title">
-              <a class="contact-icon-link" href="https://instagram.com/psicop.psicol" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram">
-                <img src="images/ChatGPT Image 22 de ago. de 2026, 15_47_55.png" alt="" class="contact-icon-img">
-              </a>
+              <span class="contact-icon-link" aria-hidden="true">
+                <img src="images/icon-instagram.png" alt="" class="contact-icon-img">
+              </span>
               <span>Instagram</span>
             </strong>
-            <a href="https://instagram.com/psicop.psicol" target="_blank" rel="noopener noreferrer">@psicop.psicol</a>
-          </div>
+            <span>@psicop.psicol</span>
+          </a>
         </div>
         <div class="contact-actions">
           <a class="button-secondary" href="https://wa.me/5551999752389" target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
         </div>
         <div class="contact-info">
-          <p>📍 Estrada João de Oliveira Remião, 2160 — Lomba do Pinheiro, Porto Alegre/RS</p>
+          <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Estrada%20Jo%C3%A3o%20de%20Oliveira%20Remi%C3%A3o%2C%202160%20-%20Lomba%20do%20Pinheiro%2C%20Porto%20Alegre%20-%20RS" target="_blank" rel="noopener noreferrer" class="address-link">Estrada João de Oliveira Remião, 2160 — Lomba do Pinheiro, Porto Alegre/RS</a></p>
           <p>🗓️ Atendemos de segunda a sábado</p>
         </div>
       </div>
     </section>
   </main>
 
-  <a
+  
     href="https://wa.me/5551999752389"
     target="_blank"
     rel="noopener noreferrer"
@@ -1025,3 +1049,5 @@
       </div>
     </div>
   </footer>
+</body>
+</html>
